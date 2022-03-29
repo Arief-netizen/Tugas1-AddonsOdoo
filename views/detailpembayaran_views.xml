@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- titipin.detailpembayaran tree view -->
+    <record id="titipin_detailpembayaran_view_tree" model="ir.ui.view">
+        <field name="name">Detail Pembayaran</field>
+        <field name="model">titipin.detailpembayaran</field>
+        <field name="arch" type="xml">
+            <tree>
+                <!-- Add your fields here -->
+                <field name="order_id"/>
+                <field name="name"/>              
+                <field name="tagihan"/> 
+                <field name="tgl_detailpembayaran"/>      
+            </tree>
+        </field>
+    </record>
+
+    <!-- titipin.detailpembayaran form view -->
+    <record id="titipin_detailpembayaran_view_form" model="ir.ui.view">
+        <field name="name">Detail Pembayaran</field>
+        <field name="model">titipin.detailpembayaran</field>
+        <field name="arch" type="xml">
+            <form string="">
+                <sheet>
+                    <group>
+                        <!-- Add your fields here -->
+                        <field name="order_id"/>
+                        <field name="name"/>
+                        <field name="tgl_detailpembayaran"/>
+                    </group>
+                    <group>
+                        <!-- Add your fields here -->
+                        <field name="tagihan"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- titipin.detailpembayaran action window -->
+    <record id="titipin_detailpembayaran_action" model="ir.actions.act_window">
+        <field name="name">Detail Pembayaran</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">titipin.detailpembayaran</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- This Menu Item must have a parent and an action -->
+    <menuitem 
+        id="titipin_detailpembayaran_menu_act" 
+        name="Detail Pembayaran" 
+        parent="titipin_order_menu_categ" 
+        action="titipin_detailpembayaran_action" 
+        sequence="20"/>
+
+</odoo>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- This Menu Item will appear in the Upper bar, that's why It needs NO parent or action -->
+    <menuitem 
+        id="titipin_menu_root" 
+        name="Titip.in Garage" 
+        sequence="10"/>
+
+    <!-- This Menu Item Must have a parent -->
+    <menuitem 
+        id="titipin_akomodasi_menu_categ" 
+        name="Akomodasi" 
+        parent="titipin_menu_root" 
+        sequence="10"/>
+
+    <!-- This Menu Item Must have a parent -->
+    <menuitem 
+        id="titipin_order_menu_categ" 
+        name="Order" 
+        parent="titipin_menu_root" 
+        sequence="20"/>
+
+    <!-- This Menu Item Must have a parent -->
+    <menuitem 
+        id="titipin_partner_menu_categ" 
+        name="Partner" 
+        parent="titipin_menu_root" 
+        sequence="30"/>
+
+</odoo>

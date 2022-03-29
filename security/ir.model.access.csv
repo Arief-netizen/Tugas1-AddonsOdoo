@@ -1,0 +1,11 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+
+access_titipin_garasi,access.titipin.garasi,model_titipin_garasi,,1,1,1,1
+access_titipin_tipegarasi,access.titipin.tipegarasi,model_titipin_tipegarasi,,1,1,1,1
+access_titipin_pengambilankend,access.titipin.pengambilankend,model_titipin_pengambilankend,,1,1,1,1
+access_titipin_fasilitastambahan,access.titipin.fasilitastambahan,model_titipin_fasilitastambahan,,1,1,1,1
+access_titipin_order,access.titipin.order,model_titipin_order,,1,1,1,1
+access_titipin_ordergarasidetail,access.titipin.ordergarasidetail,model_titipin_ordergarasidetail,,1,1,1,1
+access_titipin_orderfasilitastambahandetail,access.titipin.orderfasilitastambahandetail,model_titipin_orderfasilitastambahandetail,,1,1,1,1
+access_titipin_detailpembayaran,access.titipin.detailpembayaran,model_titipin_detailpembayaran,,1,1,1,1
+access_titipin_akunting,access.titipin.akunting,model_titipin_akunting,,1,1,1,1

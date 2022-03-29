@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- titipin.fasilitastambahan tree view -->
+    <record id="titipin_fasilitastambahan_view_tree" model="ir.ui.view">
+        <field name="name">Daftar Fasilitas Tambahan</field>
+        <field name="model">titipin.fasilitastambahan</field>
+        <field name="arch" type="xml">
+            <tree>
+                <!-- Add your fields here -->
+                <field name="name"/>
+                <field name="harga"/>
+            </tree>
+        </field>
+    </record>
+    <!-- titipin.fasilitastambahan form view -->
+    <record id="titipin_fasilitastambahan_view_form" model="ir.ui.view">
+        <field name="name">Form Fasilitas Tambahan</field>
+        <field name="model">titipin.fasilitastambahan</field>
+        <field name="arch" type="xml">
+            <form string="">
+                <sheet>
+                    <group>
+                        <!-- Add your fields here -->
+                        <field name="name"/>
+                        <field name="harga"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <!-- titipin.fasilitastambahan action window -->
+    <record id="titipin_fasilitastambahan_action" model="ir.actions.act_window">
+        <field name="name">Fasilitas Tambahan</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">titipin.fasilitastambahan</field>
+        <field name="view_mode">tree,form</field>        
+    </record>
+    <!-- This Menu Item must have a parent and an action -->
+    <menuitem 
+        id="titipin_fasilitastambahan_menu_act" 
+        name="Fasilitas Tambahan" 
+        parent="titipin_akomodasi_menu_categ" 
+        action="titipin_fasilitastambahan_action" 
+        sequence="40"/>
+
+</odoo>

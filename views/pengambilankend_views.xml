@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- titipin.pengambilankend tree view -->
+    <record id="titipin_pengambilankend_view_tree" model="ir.ui.view">
+        <field name="name">Pengambilan Kendaraan</field>
+        <field name="model">titipin.pengambilankend</field>
+        <field name="arch" type="xml">
+            <tree>
+                <!-- Add your fields here -->
+                <field name="name"/>
+                <field name="deskripsi"/>
+                <field name="harga"/>                
+            </tree>
+        </field>
+    </record>
+
+    <!-- titipin.pengambilankend form view -->
+    <record id="titipin_pengambilankend_view_form" model="ir.ui.view">
+        <field name="name">Form Pengambilan Kendaraan</field>
+        <field name="model">titipin.pengambilankend</field>
+        <field name="arch" type="xml">
+            <form string="Pengambilan Kendaraan">
+                <sheet>
+                    <group>
+                        <!-- Add your fields here -->
+                        <field name="name"/>
+                        <field name="harga"/>                        
+                    </group>
+               
+                    <group>
+                        <!-- Add your fields here -->
+                        <field name="deskripsi"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <!-- titipin.pengambilankend action window -->
+    <record id="titipin_pengambilankend_action" model="ir.actions.act_window">
+        <field name="name">Pengambilan Kendaraan</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">titipin.pengambilankend</field>
+        <field name="view_mode">tree,form</field>        
+    </record>
+    <!-- This Menu Item must have a parent and an action -->
+    <menuitem 
+        id="titipin_pengambilankend_menu_act" 
+        name="Pengambilan Kendaraan" 
+        parent="titipin_akomodasi_menu_categ" 
+        action="titipin_pengambilankend_action" 
+        sequence="30"/>
+
+</odoo>

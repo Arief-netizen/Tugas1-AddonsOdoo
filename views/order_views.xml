@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- titipin.order tree view -->
+    <record id="titipin_order_view_tree" model="ir.ui.view">
+        <field name="name">Titipin Order</field>
+        <field name="model">titipin.order</field>
+        <field name="arch" type="xml">
+        
+            <tree>
+            <header>
+                <button name="bayar_order" string="Order Dibayar" class="btn btn-success" type="object"/>
+            </header>
+                <!-- Add your fields here -->
+                <field name="name"/>   
+                <field name="pemesan"/> 
+                <field name="tanggal_pesan"/> 
+                <field name="tanggal_pengiriman"/>           
+                <field name="total"/>                
+                <field name="ordergarasidetail_ids"/>
+                <field name="orderfasilitastambahandetail_ids"/>
+                <field name="sudah_bayar"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- titipin.order form view -->
+    <record id="titipin_order_view_form" model="ir.ui.view">
+        <field name="name">Form Order</field>
+        <field name="model">titipin.order</field>
+        <field name="arch" type="xml">
+            <form string="">
+                <sheet>
+                    <group>
+                        <!-- Add your fields here -->
+                        <field name="name"/> 
+                        <field name="pemesan"/>
+                        <field name="tanggal_pesan"/>
+                        <field name="tanggal_pengiriman"/>
+                        <field name="total"/>           
+                        <field name="sudah_bayar"/>                 
+                        <field name="ordergarasidetail_ids">
+                            <tree editable='bottom'>
+                                <field name="garasi_id"/>  
+                                <field name="harga_satuan"/> 
+                                <field name="qty"/> 
+                                <field name="harga" sum="Total"/>                                        
+                            </tree>
+                        </field>      
+                        <field name="orderfasilitastambahandetail_ids">
+                            <tree editable='bottom'>
+                                <field name="fasilitastambahan_id"/>  
+                                <field name="harga_satuan"/> 
+                                <field name="qty"/> 
+                                <field name="harga" sum="Total"/>                                        
+                            </tree>
+                        </field>                                                 
+                    </group> 
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <!-- titipin_order_action action window -->
+    <record id="titipin_order_action" model="ir.actions.act_window">
+        <field name="name">Order Garasi</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">titipin.order</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <!-- This Menu Item must have a parent and an action -->
+    <menuitem 
+        id="titipin_order_menu_act" 
+        name="Order Garasi" 
+        parent="titipin_order_menu_categ" 
+        action="titipin_order_action" 
+        sequence="10"/>
+
+</odoo>

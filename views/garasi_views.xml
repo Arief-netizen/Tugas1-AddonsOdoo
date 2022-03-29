@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- titipin.garasi tree view -->
+    <record id="titipin_garasi_view_tree" model="ir.ui.view">
+        <field name="name">Kendaraan Customer</field>
+        <field name="model">titipin.garasi</field>
+        <field name="arch" type="xml">
+            <tree>
+                <!-- Add your fields here -->
+               
+                <field name="name"/>
+                <field name="jenis"/>
+                <field name="kendaraan"/>
+                <field name="warna"/>
+                <field name="tahun"/>
+                <field name="plat"/>
+                <field name="garasi_id"/>
+                <field name="durasi"/>
+                <field name="pengambilankend_id"/>
+                <field name="harga"/>
+            </tree>
+        </field>
+    </record>
+    <!-- titipin.garasi form view -->
+    <record id="titipin_garasi_view_form" model="ir.ui.view">
+        <field name="name">Form Data Kendaraan Customer</field>
+        <field name="model">titipin.garasi</field>
+        <field name="arch" type="xml">
+            <form string="">
+                <sheet>
+                    <group>
+                        <!-- Add your fields here -->
+                    
+                        <field name="name"/>
+                        <field name="jenis"/>
+                        <field name="kendaraan"/> 
+                        <field name="warna"/>
+                        <field name="tahun"/>
+                        <field name="plat"/>                     
+                    </group>
+               
+                    <group>
+                        <field name="garasi_id"/>
+                        <field name="durasi"/>
+                        <field name="pengambilankend_id"/>  
+                    </group>
+               
+                    
+
+                    <notebook>
+                        <page string="DESKRIPSI TIPE GARASI">
+                            <field name="des_tipegarasi"/>
+                        </page>
+                        <page string="DESKRIPSI PENGAMBILAN KENDARAAN">
+                            <field name="des_pengambilankend"/>
+                        </page>
+                        
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- titipin.garasi action window -->
+    <record id="titipin_garasi_action" model="ir.actions.act_window">
+        <field name="name">Daftar Kendaraan Customer</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">titipin.garasi</field>
+        <field name="view_mode">tree,form</field>        
+    </record>
+
+    <!-- This Menu Item must have a parent and an action -->
+    <menuitem 
+        id="titipin_akomodasi_garasi_menu_act" 
+        name="Mobil Customer" 
+        parent="titipin_akomodasi_menu_categ" 
+        action="titipin_garasi_action" 
+        sequence="10"/>
+
+</odoo>
